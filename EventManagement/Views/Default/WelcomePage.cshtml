@@ -1,0 +1,123 @@
+﻿@model EventManagement.ViewModel.WelcomePage
+
+@{
+    ViewBag.Title = "WelcomePage";
+}
+
+<h2>WelcomePage</h2>
+<style>
+    .custom-teal{
+        width:300px;
+        height:230px;
+        background-color:paleturquoise;
+    }
+    .custom-teal {
+        position: relative;
+    }
+        .custom-teal .glyphicon {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 50px;
+        }
+    .banner {
+        width: 300px;
+        height: 230px;
+        background-color: papayawhip;
+    }
+    .banner {
+        position: relative;
+    }
+        .banner .glyphicon {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 50px;
+        }
+    .block1 .count {
+        width: 119px;
+        margin: 0 auto;
+        height: 119px;
+        text-align: center;
+        font: 40px/116px 'Dosis', sans-serif;
+        border-radius: 500px;
+        border: 1px solid #939393;
+        margin-bottom: 25px;
+    }
+
+    .block1 {
+        text-align: center;
+        padding: 49px 0;
+    }
+    .btn {
+        display: inline-block;
+        border: 1px solid #969696;
+        color: #969696;
+        margin-top: 24px;
+        padding: 5px 32px 11px;
+        font: bold 20px/20px 'Economica', sans-serif;
+    }
+        .btn:hover {
+            color: #fff;
+            border-color: #aaccaa;
+            background-color: #aaccaa;
+        }
+    
+
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="container">
+
+            <div class="col-lg-4">
+                <img src="~/Image/page1_img1.jpg" class="img-rounded" alt="Cinque Terre" width="300" height="230" />
+
+            </div>
+            <div class="col-lg-4">
+                <img src="~/Image/Cateror1.jpg" class="img-rounded" alt="Cinque Terre" width="300" height="230" />
+            </div>
+            <div class="col-lg-4">
+                <img src="~/Image/page1_img2.jpg" class="img-rounded" alt="Cinque Terre" width="300" height="230" />
+            </div>
+            <div class="col-lg-4">
+                <div class="block1">
+                    <div class="count">1.</div>
+                    You can reserve your personal priest.
+                    <br>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="block1">
+                    <div class="count">2.</div>
+                    Reservation of cooks done here!
+                    <br>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="block1">
+                    <div class="count">3.</div>
+                    Reserve the photographer and Decorator!
+                    <br>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+
+        </div>
+     </div>
+     
+        
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
